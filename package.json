@@ -1,0 +1,24 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "custom-react-scripts": "0.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.1.0",
+    "redux-saga": "^0.16.0",
+    "seamless-immutable": "^7.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "reactotron-react-js": "^1.13.0",
+    "reactotron-redux": "^1.13.0"
+  }
+}
