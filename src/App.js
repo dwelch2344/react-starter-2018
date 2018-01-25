@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import createStore from './Redux'
+
 import './App.scss'
+import createStore from './Redux'
+import Layout from './Containers/Layout'
 
 const store = createStore()
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          Welcome
-        </div>
+        <Layout/>
       </Provider>
     )
   }
