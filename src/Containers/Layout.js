@@ -1,14 +1,14 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom'
-import NavBar, {routes} from './Nav'
+import { Route } from 'react-router-dom'
+import { ConnectedRouter } from 'react-router-redux'
 
+
+import NavBar, {routes} from './Nav'
+import { history } from '../Redux'
 const Layout = () => {
 
   return (
-    <Router>
+    <ConnectedRouter history={history}>
       <div style={{ display: 'flex' }}>
         <div style={{
           padding: '10px',
@@ -31,7 +31,7 @@ const Layout = () => {
           ))}
         </div>
       </div>
-    </Router>
+    </ConnectedRouter>
   )
 }
 

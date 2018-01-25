@@ -7,10 +7,10 @@ import createSagaMiddleware from 'redux-saga'
 // import ScreenTracking from './ScreenTrackingMiddleware'
 
 // creates the store
-export default (rootReducer, rootSaga) => {
+export default (rootReducer, rootSaga, localRouterMiddleware) => {
   /* ------------- Redux Configuration ------------- */
 
-  const middleware = []
+  const middleware = [localRouterMiddleware]
   const enhancers = []
 
   /* ------------- Analytics Middleware ------------- */
