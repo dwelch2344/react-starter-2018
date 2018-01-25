@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 
 import './App.scss'
+import './Config/ReactotronConfig'
 import createStore from './Redux'
 import Layout from './Containers/Layout'
 
