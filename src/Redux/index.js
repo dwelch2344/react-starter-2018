@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux'
-import configureStore from './CreateStore'
-import rootSaga from '../Sagas/'
-
-
 import createHistory from 'history/createBrowserHistory'
 import { routerReducer, routerMiddleware, push } from 'react-router-redux'
+
+import configureStore from './CreateStore'
+import rootSaga from '../Sagas/'
 
 export const history = createHistory()
 const localRouterMiddleware = routerMiddleware(history)
