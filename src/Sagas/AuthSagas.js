@@ -8,10 +8,9 @@ export default function configure(api){
   ]
 }
 
-export function * doLogin (api, action) {  
+export function * doLogin (api, { email, password }) {  
   debugger 
 
-  // const { email, password } = action  
   // const response = yield call(api.login, email, password)
 
   // if (response.ok) {    
