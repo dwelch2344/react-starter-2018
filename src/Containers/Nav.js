@@ -44,7 +44,7 @@ export const Sidebar = ({ account, history }) => {
       <div className="sidebar-wrapper">
             <div className="logo">
                 <a className="simple-text">
-                    Hexly
+                    Admin
                 </a>
             </div>
             { account && (
@@ -131,7 +131,7 @@ export const AppNavBar = () => {
     <Navbar collapseOnSelect className="top-nav">
       <Navbar.Header>
         <Navbar.Brand>
-          <a>Hexly</a>
+          <a>Admin</a>
         </Navbar.Brand>
         <Navbar.Toggle/>
       </Navbar.Header>
