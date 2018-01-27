@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 import createHistory from 'history/createBrowserHistory'
-import { routerReducer, routerMiddleware, push } from 'react-router-redux'
+import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 import configureStore from './CreateStore'
 import rootSaga from '../Sagas/'
@@ -12,6 +13,7 @@ const localRouterMiddleware = routerMiddleware(history)
 export const reducers = combineReducers({
   // nav: require('./NavigationRedux').reducer,
   // startup: require('./StartupRedux').reducer,
+  form: formReducer,
   router: routerReducer,
   auth: require('./AuthRedux').reducer,
 })

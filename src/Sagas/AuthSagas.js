@@ -1,6 +1,6 @@
-import { call, put, takeLatest, all } from 'redux-saga/effects'
+import { takeLatest, put, /* call, all */ } from 'redux-saga/effects'
 // import { path, pick } from 'ramda'
-import AuthActions, { AuthTypes } from '../Redux/AuthRedux'
+import AuthCreators, { AuthTypes } from '../Redux/AuthRedux'
 
 export default function configure(api){
   return [ 
@@ -8,21 +8,22 @@ export default function configure(api){
   ]
 }
 
-export function * doLogin (api, { email, password }) {  
-  debugger 
-
+export function * doLogin (api, { email, password, tenant }) {  
+  console.log('Do login: ', email, tenant, !!password )
+  yield put( AuthCreators.loginResultFailure( new AuthError('Not Implemented Yet')))
+    
   // const response = yield call(api.login, email, password)
 
   // if (response.ok) {    
   //   const user = parseAccount(response.data)
   //   api.setToken(user.token)
-  //   yield put( AuthActions.loginResultSuccess(user))
+  //   yield put( AuthCreators.loginResultSuccess(user))
   // } else {
   //   let message = 'Failed to login.'
   //   if(response.data && response.data.errors && response.data.errors[0]) {
   //     message = response.data.errors[0]
   //   }
-  //   yield put( AuthActions.loginResultFailure( new AuthError(message, response)))
+  //   yield put( AuthCreators.loginResultFailure( new AuthError(message, response)))
   // }
 }
 

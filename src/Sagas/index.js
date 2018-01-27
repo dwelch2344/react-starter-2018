@@ -1,4 +1,4 @@
-import { takeLatest, all } from 'redux-saga/effects'
+import { all } from 'redux-saga/effects'
 import API from '../Services/Api'
 
 import authSagas from './AuthSagas'
